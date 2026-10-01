@@ -1,0 +1,4 @@
+.row.has-synonyms{grid-template-rows:auto auto}
+.row.has-synonyms .label{grid-row:1 / span 2}
+.synonyms{grid-column:2;font:400 9px/1.4 var(--font);color:#8995a7;margin-top:3px}
+.detail-synonyms{display:block;margin-top:4px}
