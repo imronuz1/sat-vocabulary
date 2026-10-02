@@ -1,15 +1,15 @@
 # SAT Vocabulary
 
-A responsive multilingual SAT vocabulary deck with independent word sets and active recall flashcards.
+A responsive SAT vocabulary deck with independent source lists and active-recall flashcards.
 
 ## Features
 
 - Separate `KernelSAT PDF` and `Original list` decks, with a de-duplicated combined view
-- Search across English definitions, synonyms, and Arabic, Russian, and Uzbek translations
-- Filter by Learning or Mastered status and sort alphabetically or randomly
-- Study in short active-recall sessions with spaced review intervals
-- Save vocabulary status and review dates in the browser
-- Responsive vocabulary cards for desktop, tablet, and mobile
+- The PDF deck follows the source order; sort choices include A–Z, Z–A, and random
+- Search English words, definitions, synonyms, and Russian or Uzbek translations
+- Filter by Learning or Mastered status
+- Choose a study list, session size, and list or random order before starting flashcards
+- Active recall with review intervals, saved in the browser
 
 ## Run locally
 
@@ -17,4 +17,4 @@ Open `index.html` in a modern browser. The app uses plain HTML, CSS, and JavaScr
 
 ## Vocabulary data
 
-The data is kept separately from the interface in `data/original.js` and `data/kernelsat.js`. Edit either file to update its deck; the combined word count is calculated from the unique entries. The KernelSAT source file has 1500 entries that expand to 1575 study terms because some source entries include multiple related forms.
+Edit `data/original.js` or `data/kernelsat.js` to update a deck. Counts are calculated from the unique vocabulary entries. The KernelSAT PDF has 1500 source entries expanded into 1575 study terms because some entries include multiple related forms.

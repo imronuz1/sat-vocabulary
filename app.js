@@ -6,7 +6,7 @@
   const sort = document.getElementById('sort');
   const dialog = document.getElementById('detail');
   const study = document.getElementById('study');
-  let filter = 'all', selectedDeck = 'all', current = null, session = [], sessionIndex = 0;
+  let filter = 'all', selectedDeck = 'pdf', current = null, session = [], sessionIndex = 0;
   let statuses = {}, reviews = {};
   try { statuses = JSON.parse(localStorage.getItem('verba-status') || '{}'); } catch {}
   try { reviews = JSON.parse(localStorage.getItem('verba-reviews') || '{}'); } catch {}
@@ -35,7 +35,7 @@
 
   function row(label, value, cls = '', attr = '', synonyms = '') {
     return '<div class="row ' + cls + (synonyms ? ' has-synonyms' : '') + '"><span class="label">' + label +
-      '</span><span class="value ' + (cls === 'arabic' ? 'arabic' : '') + '" ' + attr + '>' +
+      '</span><span class="value" ' + attr + '>' +
       escapeHTML(value || '—') + '</span>' + (synonyms ? '<small class="synonyms">Synonyms · ' +
       escapeHTML(synonyms) + '</small>' : '') + '</div>';
   }
@@ -44,13 +44,13 @@
     const needle = query.value.trim().toLocaleLowerCase();
     const scoped = deckWords();
     const visible = scoped.filter(word => {
-      const searchable = [word.word, word.definition, word.synonyms, word.arabic, word.russian, word.uzbek].join(' ').toLocaleLowerCase();
+      const searchable = [word.word, word.definition, word.synonyms, word.russian, word.uzbek].join(' ').toLocaleLowerCase();
       return searchable.includes(needle) && (filter === 'all' || status(word.word) === filter);
     });
     if (sort.value === 'az') visible.sort((a, b) => a.word.localeCompare(b.word));
     if (sort.value === 'za') visible.sort((a, b) => b.word.localeCompare(a.word));
     if (sort.value === 'random') visible.sort((a, b) => (a.randomKey ??= Math.random()) - (b.randomKey ??= Math.random()));
-    grid.innerHTML = visible.map(word => '<article class="card" tabindex="0" role="button" data-word="' + escapeHTML(word.word) + '" aria-label="Study ' + escapeHTML(word.word) + '"><div class="card-head"><span class="card-word">' + escapeHTML(word.word) + '</span><span class="status ' + status(word.word) + '">' + status(word.word) + '</span></div>' + row('Definition', word.definition, '', '', word.synonyms) + row('Arabic', word.arabic, 'arabic', 'lang="ar" dir="rtl"') + row('Russian', word.russian, '', 'lang="ru"') + row('Uzbek', word.uzbek, '', 'lang="uz"') + row('Example', word.sentence, 'example') + '</article>').join('');
+    grid.innerHTML = visible.map(word => '<article class="card" tabindex="0" role="button" data-word="' + escapeHTML(word.word) + '" aria-label="Study ' + escapeHTML(word.word) + '"><div class="card-head"><span class="card-word">' + escapeHTML(word.word) + '</span><span class="status ' + status(word.word) + '">' + status(word.word) + '</span></div>' + row('Definition', word.definition, '', '', word.synonyms) + row('Russian', word.russian, '', 'lang="ru"') + row('Uzbek', word.uzbek, '', 'lang="uz"') + row('Example', word.sentence, 'example') + '</article>').join('');
     document.getElementById('empty').hidden = visible.length > 0;
     grid.hidden = visible.length === 0;
     document.getElementById('results').textContent = (needle || filter !== 'all' || selectedDeck !== 'all') ? 'Showing ' + visible.length + ' of ' + scoped.length + ' words' : 'Showing all ' + visible.length + ' words';
@@ -65,7 +65,7 @@
   function showDetails(word) {
     if (!word) return;
     current = word;
-    [['d-word',word.word],['d-pos',word.partOfSpeech||'word'],['d-pron',word.pronunciation||'—'],['d-def',word.definition||'—'],['d-synonyms',word.synonyms?'Synonyms · '+word.synonyms:''],['d-ar',word.arabic||'—'],['d-ru',word.russian||'—'],['d-uz',word.uzbek||'—'],['d-sentence',word.sentence||'—']].forEach(([id,value]) => document.getElementById(id).textContent=value);
+    [['d-word',word.word],['d-pos',word.partOfSpeech||'word'],['d-pron',word.pronunciation||'—'],['d-def',word.definition||'—'],['d-synonyms',word.synonyms?'Synonyms · '+word.synonyms:''],['d-ru',word.russian||'—'],['d-uz',word.uzbek||'—'],['d-sentence',word.sentence||'—']].forEach(([id,value]) => document.getElementById(id).textContent=value);
     dialog.showModal();
   }
 
@@ -77,12 +77,22 @@
   }
 
   function beginStudy() {
-    const pool = deckWords();
+    const studyDeck = document.getElementById('study-deck').value;
+    const pool = studyDeck === 'all' ? allWords : sets[studyDeck];
     const now = Date.now();
-    const available = pool.filter(w => !reviews[w.word] || (reviews[w.word].due || 0) <= now)
-      .sort((a,b) => (reviews[a.word]?.due || 0) - (reviews[b.word]?.due || 0));
-    session = available.slice(0, 10);
+    const available = pool.filter(w => !reviews[w.word] || (reviews[w.word].due || 0) <= now);
+    const order = document.querySelector('input[name="study-order"]:checked').value;
+    if (order === 'random') {
+      for (let i = available.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [available[i], available[j]] = [available[j], available[i]];
+      }
+    }
+    const requested = document.getElementById('study-limit').value;
+    session = available.slice(0, requested === 'all' ? available.length : Number(requested));
     sessionIndex = 0;
+    document.getElementById('study-setup').hidden = true;
+    document.querySelector('.study-progress').hidden = false;
     document.getElementById('study-finished').hidden = true;
     document.querySelector('.flashcard').hidden = session.length === 0;
     document.getElementById('review-actions').hidden = true;
@@ -91,13 +101,12 @@
       document.getElementById('study-finished').querySelector('strong').textContent = 'All caught up';
       document.getElementById('study-finished').querySelector('span').textContent = 'No words are due right now. Come back later for your next spaced review.';
     } else showStudyCard();
-    if (!study.open) study.showModal();
   }
 
   function showStudyCard() {
     const word = session[sessionIndex];
     document.getElementById('study-count').textContent = 'Card ' + (sessionIndex + 1) + ' of ' + session.length;
-    document.getElementById('study-due').textContent = session.length + ' in this session';
+    document.getElementById('study-due').textContent = 'Due now · ' + session.length + ' selected';
     document.getElementById('flash-word').textContent = word.word;
     document.getElementById('flashcard-label').textContent = 'TRY TO RECALL THE MEANING';
     document.getElementById('flash-answer').hidden = true;
@@ -109,7 +118,7 @@
     const word = session[sessionIndex];
     const answer = document.getElementById('flash-answer');
     answer.querySelector('.flash-definition').textContent = word.definition || 'Definition unavailable';
-    answer.querySelector('.flash-translations').innerHTML = [['Arabic',word.arabic],['Russian',word.russian],['Uzbek',word.uzbek]].filter(x=>x[1]).map(([label,value])=>'<div><b>'+label+'</b><span>'+escapeHTML(value)+'</span></div>').join('');
+    answer.querySelector('.flash-translations').innerHTML = [['Russian',word.russian],['Uzbek',word.uzbek]].filter(x=>x[1]).map(([label,value])=>'<div><b>'+label+'</b><span>'+escapeHTML(value)+'</span></div>').join('');
     answer.querySelector('.flash-example').textContent = word.sentence || '';
     answer.hidden = false;
     document.getElementById('flashcard-label').textContent = word.partOfSpeech || 'WORD';
@@ -139,6 +148,7 @@
       document.getElementById('study-finished').hidden = false;
       document.getElementById('study-finished').querySelector('strong').textContent = 'Session complete';
       document.getElementById('study-finished').querySelector('span').textContent = 'You reviewed ' + session.length + ' words. Your next reviews are scheduled automatically.';
+      document.getElementById('study-finished').querySelector('button').textContent = 'Choose another session';
     } else showStudyCard();
     draw();
   }
@@ -159,8 +169,13 @@
   document.getElementById('learning').onclick = () => setStatus('learning');
   document.getElementById('mastered').onclick = () => setStatus('mastered');
   dialog.onclick = event => { if (event.target === dialog) dialog.close(); };
-  document.getElementById('start-study').onclick = beginStudy;
-  document.getElementById('study-again').onclick = beginStudy;
+  document.getElementById('start-study').onclick = () => { study.showModal(); };
+  document.getElementById('begin-study').onclick = beginStudy;
+  document.getElementById('study-again').onclick = () => {
+    document.getElementById('study-finished').hidden = true;
+    document.getElementById('study-setup').hidden = false;
+    document.querySelector('.study-progress').hidden = true;
+  };
   document.getElementById('study-close').onclick = () => study.close();
   document.getElementById('reveal').onclick = revealAnswer;
   document.querySelectorAll('.review-actions button').forEach(button => button.onclick = () => rateCard(button.dataset.rating));
