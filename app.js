@@ -16,6 +16,32 @@
     ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const deckWords = () => selectedDeck === 'all' ? allWords : sets[selectedDeck];
 
+  function parseRange(value, length) {
+    const match = value.trim().match(/^(\d+)\s*(?:-\s*(\d+))?$/);
+    if (!match) return null;
+    const start = match[2] === undefined ? 0 : Number(match[1]);
+    const end = match[2] === undefined ? Number(match[1]) : Number(match[2]);
+    if (end <= start || start >= length) return null;
+    return {start, end:Math.min(end,length), requestedEnd:end};
+  }
+
+  function updateRangePreview() {
+    const isCustom = document.getElementById('study-limit').value === 'custom';
+    const field = document.getElementById('range-field');
+    field.hidden = !isCustom;
+    if (!isCustom) return;
+    const deck = document.getElementById('study-deck').value;
+    const pool = deck === 'all' ? allWords : sets[deck];
+    const input = document.getElementById('word-range');
+    const preview = document.getElementById('range-preview');
+    const range = parseRange(input.value, pool.length);
+    if (!range) {
+      preview.textContent = input.value.trim() ? 'Enter a range within 0–' + pool.length + '.' : pool.length + ' words in this list.';
+      return;
+    }
+    preview.textContent = 'Words ' + range.start + '–' + range.end + ' · ' + (range.end-range.start) + ' words' + (range.requestedEnd > pool.length ? ' (end capped at list size)' : '');
+  }
+
   function updateStats() {
     const scoped = deckWords();
     const mastered = scoped.filter(w => status(w.word) === 'mastered').length;
@@ -80,16 +106,23 @@
     const studyDeck = document.getElementById('study-deck').value;
     const pool = studyDeck === 'all' ? allWords : sets[studyDeck];
     const now = Date.now();
-    const available = pool.filter(w => !reviews[w.word] || (reviews[w.word].due || 0) <= now);
+    let available = pool.filter(w => !reviews[w.word] || (reviews[w.word].due || 0) <= now);
     const order = document.querySelector('input[name="study-order"]:checked').value;
+    const requested = document.getElementById('study-limit').value;
+    if (requested === 'custom') {
+      const range = parseRange(document.getElementById('word-range').value, pool.length);
+      if (!range) { updateRangePreview(); document.getElementById('word-range').focus(); return; }
+      available = pool.slice(range.start, range.end);
+    } else {
+      available = available.slice(0, requested === 'all' ? available.length : Number(requested));
+    }
     if (order === 'random') {
       for (let i = available.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [available[i], available[j]] = [available[j], available[i]];
       }
     }
-    const requested = document.getElementById('study-limit').value;
-    session = available.slice(0, requested === 'all' ? available.length : Number(requested));
+    session = available;
     sessionIndex = 0;
     document.getElementById('study-setup').hidden = true;
     document.querySelector('.study-progress').hidden = false;
@@ -170,6 +203,9 @@
   document.getElementById('mastered').onclick = () => setStatus('mastered');
   dialog.onclick = event => { if (event.target === dialog) dialog.close(); };
   document.getElementById('start-study').onclick = () => { study.showModal(); };
+  document.getElementById('study-limit').onchange = updateRangePreview;
+  document.getElementById('study-deck').onchange = updateRangePreview;
+  document.getElementById('word-range').oninput = updateRangePreview;
   document.getElementById('begin-study').onclick = beginStudy;
   document.getElementById('study-again').onclick = () => {
     document.getElementById('study-finished').hidden = true;
