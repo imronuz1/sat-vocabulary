@@ -1,74 +1,63 @@
 (() => {
-  const words = window.VOCABULARY || [];
+  const sets = window.VOCABULARY_SETS || { pdf: window.VOCABULARY || [], original: [] };
+  const allWords = [...new Map([...sets.original, ...sets.pdf].map(word => [word.word.toLocaleLowerCase(), word])).values()];
   const grid = document.getElementById('grid');
   const query = document.getElementById('query');
   const sort = document.getElementById('sort');
   const dialog = document.getElementById('detail');
-  let filter = 'all';
-  let current = null;
-  let statuses = {};
+  const study = document.getElementById('study');
+  let filter = 'all', selectedDeck = 'all', current = null, session = [], sessionIndex = 0;
+  let statuses = {}, reviews = {};
   try { statuses = JSON.parse(localStorage.getItem('verba-status') || '{}'); } catch {}
+  try { reviews = JSON.parse(localStorage.getItem('verba-reviews') || '{}'); } catch {}
 
   const status = word => statuses[word] || 'new';
   const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, char =>
     ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  const deckWords = () => selectedDeck === 'all' ? allWords : sets[selectedDeck];
 
   function updateStats() {
-    const mastered = words.filter(word => status(word.word) === 'mastered').length;
-    const learning = words.filter(word => status(word.word) === 'learning').length;
-    const percent = words.length ? Math.round(mastered / words.length * 100) : 0;
-    document.getElementById('total').textContent = words.length;
-    document.getElementById('all-stat').textContent = words.length;
-    document.getElementById('all-count').textContent = words.length;
+    const scoped = deckWords();
+    const mastered = scoped.filter(w => status(w.word) === 'mastered').length;
+    const learning = scoped.filter(w => status(w.word) === 'learning').length;
+    const percent = scoped.length ? Math.round(mastered / scoped.length * 100) : 0;
+    document.getElementById('total').textContent = allWords.length;
+    document.getElementById('all-stat').textContent = scoped.length;
+    document.getElementById('all-count').textContent = scoped.length;
     document.getElementById('learn-stat').textContent = learning;
     document.getElementById('master-stat').textContent = mastered;
     document.getElementById('progress').style.width = percent + '%';
     document.getElementById('progress-label').textContent = percent + '% mastered';
+    document.getElementById('deck-all-count').textContent = allWords.length;
+    document.getElementById('deck-pdf-count').textContent = sets.pdf.length;
+    document.getElementById('deck-original-count').textContent = sets.original.length;
   }
 
   function row(label, value, cls = '', attr = '', synonyms = '') {
-    const shown = value || '—';
-    return '<div class="row ' + cls + (synonyms ? ' has-synonyms' : '') + '">' +
-      '<span class="label">' + label + '</span><span class="value ' +
-      (cls === 'arabic' ? 'arabic' : '') + '" ' + attr + '>' + escapeHTML(shown) +
-      '</span>' + (synonyms ? '<small class="synonyms">Synonyms · ' +
-        escapeHTML(synonyms) + '</small>' : '') + '</div>';
+    return '<div class="row ' + cls + (synonyms ? ' has-synonyms' : '') + '"><span class="label">' + label +
+      '</span><span class="value ' + (cls === 'arabic' ? 'arabic' : '') + '" ' + attr + '>' +
+      escapeHTML(value || '—') + '</span>' + (synonyms ? '<small class="synonyms">Synonyms · ' +
+      escapeHTML(synonyms) + '</small>' : '') + '</div>';
   }
 
   function draw() {
     const needle = query.value.trim().toLocaleLowerCase();
-    const visible = words.filter(word => {
-      const searchable = [word.word, word.definition, word.synonyms, word.arabic,
-        word.russian, word.uzbek].join(' ').toLocaleLowerCase();
+    const scoped = deckWords();
+    const visible = scoped.filter(word => {
+      const searchable = [word.word, word.definition, word.synonyms, word.arabic, word.russian, word.uzbek].join(' ').toLocaleLowerCase();
       return searchable.includes(needle) && (filter === 'all' || status(word.word) === filter);
     });
     if (sort.value === 'az') visible.sort((a, b) => a.word.localeCompare(b.word));
     if (sort.value === 'za') visible.sort((a, b) => b.word.localeCompare(a.word));
-    if (sort.value === 'random') visible.sort((a, b) =>
-      (a.randomKey ??= Math.random()) - (b.randomKey ??= Math.random()));
-
-    grid.innerHTML = visible.map(word =>
-      '<article class="card" tabindex="0" role="button" data-word="' +
-      escapeHTML(word.word) + '" aria-label="Study ' + escapeHTML(word.word) + '">' +
-      '<div class="card-head"><span class="card-word">' + escapeHTML(word.word) +
-      '</span><span class="status ' + status(word.word) + '">' + status(word.word) +
-      '</span></div>' + row('Definition', word.definition, '', '', word.synonyms) +
-      row('Arabic', word.arabic, 'arabic', 'lang="ar" dir="rtl"') +
-      row('Russian', word.russian, '', 'lang="ru"') +
-      row('Uzbek', word.uzbek, '', 'lang="uz"') +
-      row('Example', word.sentence, 'example') + '</article>'
-    ).join('');
+    if (sort.value === 'random') visible.sort((a, b) => (a.randomKey ??= Math.random()) - (b.randomKey ??= Math.random()));
+    grid.innerHTML = visible.map(word => '<article class="card" tabindex="0" role="button" data-word="' + escapeHTML(word.word) + '" aria-label="Study ' + escapeHTML(word.word) + '"><div class="card-head"><span class="card-word">' + escapeHTML(word.word) + '</span><span class="status ' + status(word.word) + '">' + status(word.word) + '</span></div>' + row('Definition', word.definition, '', '', word.synonyms) + row('Arabic', word.arabic, 'arabic', 'lang="ar" dir="rtl"') + row('Russian', word.russian, '', 'lang="ru"') + row('Uzbek', word.uzbek, '', 'lang="uz"') + row('Example', word.sentence, 'example') + '</article>').join('');
     document.getElementById('empty').hidden = visible.length > 0;
     grid.hidden = visible.length === 0;
-    document.getElementById('results').textContent = needle || filter !== 'all'
-      ? 'Showing ' + visible.length + ' of ' + words.length + ' words'
-      : 'Showing all ' + visible.length + ' words';
+    document.getElementById('results').textContent = (needle || filter !== 'all' || selectedDeck !== 'all') ? 'Showing ' + visible.length + ' of ' + scoped.length + ' words' : 'Showing all ' + visible.length + ' words';
     grid.querySelectorAll('.card').forEach(card => {
-      const open = () => showDetails(words.find(word => word.word === card.dataset.word));
+      const open = () => showDetails(scoped.find(word => word.word === card.dataset.word));
       card.onclick = open;
-      card.onkeydown = event => {
-        if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); open(); }
-      };
+      card.onkeydown = event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); open(); } };
     });
     updateStats();
   }
@@ -76,14 +65,7 @@
   function showDetails(word) {
     if (!word) return;
     current = word;
-    const values = [
-      ['d-word', word.word], ['d-pos', word.partOfSpeech || 'word'],
-      ['d-pron', word.pronunciation || '—'], ['d-def', word.definition || '—'],
-      ['d-synonyms', word.synonyms ? 'Synonyms · ' + word.synonyms : ''],
-      ['d-ar', word.arabic || '—'], ['d-ru', word.russian || '—'],
-      ['d-uz', word.uzbek || '—'], ['d-sentence', word.sentence || '—']
-    ];
-    values.forEach(([id, value]) => { document.getElementById(id).textContent = value; });
+    [['d-word',word.word],['d-pos',word.partOfSpeech||'word'],['d-pron',word.pronunciation||'—'],['d-def',word.definition||'—'],['d-synonyms',word.synonyms?'Synonyms · '+word.synonyms:''],['d-ar',word.arabic||'—'],['d-ru',word.russian||'—'],['d-uz',word.uzbek||'—'],['d-sentence',word.sentence||'—']].forEach(([id,value]) => document.getElementById(id).textContent=value);
     dialog.showModal();
   }
 
@@ -91,28 +73,98 @@
     if (!current) return;
     statuses[current.word] = value;
     localStorage.setItem('verba-status', JSON.stringify(statuses));
-    dialog.close();
+    dialog.close(); draw();
+  }
+
+  function beginStudy() {
+    const pool = deckWords();
+    const now = Date.now();
+    const available = pool.filter(w => !reviews[w.word] || (reviews[w.word].due || 0) <= now)
+      .sort((a,b) => (reviews[a.word]?.due || 0) - (reviews[b.word]?.due || 0));
+    session = available.slice(0, 10);
+    sessionIndex = 0;
+    document.getElementById('study-finished').hidden = true;
+    document.querySelector('.flashcard').hidden = session.length === 0;
+    document.getElementById('review-actions').hidden = true;
+    if (!session.length) {
+      document.getElementById('study-finished').hidden = false;
+      document.getElementById('study-finished').querySelector('strong').textContent = 'All caught up';
+      document.getElementById('study-finished').querySelector('span').textContent = 'No words are due right now. Come back later for your next spaced review.';
+    } else showStudyCard();
+    if (!study.open) study.showModal();
+  }
+
+  function showStudyCard() {
+    const word = session[sessionIndex];
+    document.getElementById('study-count').textContent = 'Card ' + (sessionIndex + 1) + ' of ' + session.length;
+    document.getElementById('study-due').textContent = session.length + ' in this session';
+    document.getElementById('flash-word').textContent = word.word;
+    document.getElementById('flashcard-label').textContent = 'TRY TO RECALL THE MEANING';
+    document.getElementById('flash-answer').hidden = true;
+    document.getElementById('review-actions').hidden = true;
+    document.getElementById('reveal').hidden = false;
+  }
+
+  function revealAnswer() {
+    const word = session[sessionIndex];
+    const answer = document.getElementById('flash-answer');
+    answer.querySelector('.flash-definition').textContent = word.definition || 'Definition unavailable';
+    answer.querySelector('.flash-translations').innerHTML = [['Arabic',word.arabic],['Russian',word.russian],['Uzbek',word.uzbek]].filter(x=>x[1]).map(([label,value])=>'<div><b>'+label+'</b><span>'+escapeHTML(value)+'</span></div>').join('');
+    answer.querySelector('.flash-example').textContent = word.sentence || '';
+    answer.hidden = false;
+    document.getElementById('flashcard-label').textContent = word.partOfSpeech || 'WORD';
+    document.getElementById('reveal').hidden = true;
+    document.getElementById('review-actions').hidden = false;
+  }
+
+  function rateCard(rating) {
+    const word = session[sessionIndex];
+    const prev = reviews[word.word] || {box:0};
+    const intervals = [1,3,7,14,30,60];
+    let box = prev.box || 0, delay;
+    if (rating === 'again') { box = 0; delay = 60_000; statuses[word.word] = 'learning'; }
+    else if (rating === 'hard') { box = Math.max(1,box); delay = 86_400_000; statuses[word.word] = 'learning'; }
+    else {
+      box = Math.min(intervals.length - 1, box + (rating === 'easy' ? 2 : 1));
+      delay = intervals[box] * 86_400_000;
+      statuses[word.word] = box >= 3 ? 'mastered' : 'learning';
+    }
+    reviews[word.word] = {box, due:Date.now()+delay, seen:(prev.seen||0)+1};
+    localStorage.setItem('verba-reviews', JSON.stringify(reviews));
+    localStorage.setItem('verba-status', JSON.stringify(statuses));
+    sessionIndex++;
+    if (sessionIndex >= session.length) {
+      document.querySelector('.flashcard').hidden = true;
+      document.getElementById('review-actions').hidden = true;
+      document.getElementById('study-finished').hidden = false;
+      document.getElementById('study-finished').querySelector('strong').textContent = 'Session complete';
+      document.getElementById('study-finished').querySelector('span').textContent = 'You reviewed ' + session.length + ' words. Your next reviews are scheduled automatically.';
+    } else showStudyCard();
     draw();
   }
 
   query.oninput = draw;
   sort.onchange = draw;
-  document.querySelectorAll('.filters button').forEach(button => {
-    button.onclick = () => {
-      filter = button.dataset.filter;
-      document.querySelectorAll('.filters button').forEach(item =>
-        item.classList.toggle('active', item === button));
-      draw();
-    };
+  document.querySelectorAll('.filters button').forEach(button => button.onclick = () => {
+    filter = button.dataset.filter;
+    document.querySelectorAll('.filters button').forEach(item => item.classList.toggle('active', item === button));
+    draw();
+  });
+  document.querySelectorAll('.deck').forEach(button => button.onclick = () => {
+    selectedDeck = button.dataset.deck;
+    document.querySelectorAll('.deck').forEach(item => item.classList.toggle('active',item===button));
+    draw();
   });
   document.getElementById('close').onclick = () => dialog.close();
   document.getElementById('learning').onclick = () => setStatus('learning');
   document.getElementById('mastered').onclick = () => setStatus('mastered');
   dialog.onclick = event => { if (event.target === dialog) dialog.close(); };
-  document.addEventListener('keydown', event => {
-    if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
-      event.preventDefault(); query.focus();
-    }
-  });
+  document.getElementById('start-study').onclick = beginStudy;
+  document.getElementById('study-again').onclick = beginStudy;
+  document.getElementById('study-close').onclick = () => study.close();
+  document.getElementById('reveal').onclick = revealAnswer;
+  document.querySelectorAll('.review-actions button').forEach(button => button.onclick = () => rateCard(button.dataset.rating));
+  study.onclick = event => { if (event.target === study) study.close(); };
+  document.addEventListener('keydown', event => { if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); query.focus(); } });
   draw();
 })();

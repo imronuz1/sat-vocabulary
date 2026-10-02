@@ -1,22 +1,20 @@
 # SAT Vocabulary
 
-A clean, responsive SAT vocabulary study deck with compact word cards.
+A responsive multilingual SAT vocabulary deck with independent word sets and active recall flashcards.
 
 ## Features
 
-- Search English words, definitions, synonyms, and translations
-- Filter by Learning or Mastered status
-- Sort alphabetically or randomly
-- Open word details and update study status
-- Save study progress in the browser
-- Responsive card grid for desktop, tablet, and mobile
+- Separate `KernelSAT PDF` and `Original list` decks, with a de-duplicated combined view
+- Search across English definitions, synonyms, and Arabic, Russian, and Uzbek translations
+- Filter by Learning or Mastered status and sort alphabetically or randomly
+- Study in short active-recall sessions with spaced review intervals
+- Save vocabulary status and review dates in the browser
+- Responsive vocabulary cards for desktop, tablet, and mobile
 
 ## Run locally
 
-Open index.html in a modern browser. The app uses plain HTML, CSS, and JavaScript; no build step is required.
+Open `index.html` in a modern browser. The app uses plain HTML, CSS, and JavaScript; no build step is required.
 
 ## Vocabulary data
 
-Edit vocabulary.js to add or update entries. The word count is calculated from the dataset. Each entry can include pronunciation, part of speech, definition, synonyms, Arabic, Russian, Uzbek, example sentence, and study status.
-
-This deck contains the original sample entries and entries extracted from the supplied KernelSAT SAT vocabulary PDF. The PDF includes English definitions, synonyms, and examples, but not the three translations, so those fields are blank for imported entries.
+The data is kept separately from the interface in `data/original.js` and `data/kernelsat.js`. Edit either file to update its deck; the combined word count is calculated from the unique entries. The KernelSAT source file has 1500 entries that expand to 1575 study terms because some source entries include multiple related forms.

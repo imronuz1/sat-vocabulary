@@ -1,365 +1,6 @@
-// Source: SAT vocabulary entries supplied in the KernelSAT PDF, merged with the original sample deck.
-window.VOCABULARY = [
-  {
-    "word": "Abate",
-    "pronunciation": "/əˈbeɪt/",
-    "partOfSpeech": "verb",
-    "definition": "to become less intense or severe",
-    "arabic": "يخفّ / يتراجع",
-    "russian": "ослабевать",
-    "uzbek": "kamaymoq / susaymoq",
-    "sentence": "The storm began to abate after midnight.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Aberration",
-    "pronunciation": "/ˌæbəˈreɪʃən/",
-    "partOfSpeech": "noun",
-    "definition": "a departure from what is normal, expected, or typical",
-    "arabic": "انحراف / شذوذ",
-    "russian": "отклонение",
-    "uzbek": "og‘ish / noodatiylik",
-    "sentence": "The warm day was an aberration in an otherwise cold winter.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Acumen",
-    "pronunciation": "/ˈækjəmən/",
-    "partOfSpeech": "noun",
-    "definition": "the ability to make quick, accurate judgments",
-    "arabic": "فِطنة / حِذق",
-    "russian": "проницательность",
-    "uzbek": "ziyraklik / fahm",
-    "sentence": "Her business acumen helped the small company grow.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Admonish",
-    "pronunciation": "/ədˈmɑːnɪʃ/",
-    "partOfSpeech": "verb",
-    "definition": "to warn or reprimand someone firmly",
-    "arabic": "يوبّخ / يحذّر",
-    "russian": "делать выговор",
-    "uzbek": "tanbeh bermoq",
-    "sentence": "The editor admonished the writer for missing the deadline.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Alacrity",
-    "pronunciation": "/əˈlækrəti/",
-    "partOfSpeech": "noun",
-    "definition": "brisk and cheerful readiness",
-    "arabic": "حماسة / نشاط",
-    "russian": "готовность / рвение",
-    "uzbek": "ishtiyoq / chaqqonlik",
-    "sentence": "She accepted the challenging assignment with alacrity.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Amiable",
-    "pronunciation": "/ˈeɪmiəbəl/",
-    "partOfSpeech": "adjective",
-    "definition": "having a friendly and pleasant manner",
-    "arabic": "ودود / لطيف",
-    "russian": "любезный / дружелюбный",
-    "uzbek": "xushmuomala / do‘stona",
-    "sentence": "The amiable host made every guest feel welcome.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Anomaly",
-    "pronunciation": "/əˈnɑːməli/",
-    "partOfSpeech": "noun",
-    "definition": "something that differs from what is usual or expected",
-    "arabic": "ظاهرة شاذة / خلل",
-    "russian": "аномалия",
-    "uzbek": "anomaliya / g‘ayrioddiy holat",
-    "sentence": "They repeated the test to see whether the reading was an anomaly.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Arduous",
-    "pronunciation": "/ˈɑːrdʒuəs/",
-    "partOfSpeech": "adjective",
-    "definition": "requiring great effort or endurance",
-    "arabic": "شاقّ / مُضنٍ",
-    "russian": "трудный / изнурительный",
-    "uzbek": "mashaqqatli / og‘ir",
-    "sentence": "The arduous climb rewarded them with a view of the valley.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Articulate",
-    "pronunciation": "/ɑːrˈtɪkjələt/",
-    "partOfSpeech": "adjective",
-    "definition": "able to express ideas clearly and effectively",
-    "arabic": "فصيح / واضح التعبير",
-    "russian": "красноречивый",
-    "uzbek": "ravon gapiradigan",
-    "sentence": "The articulate speaker explained the proposal in simple terms.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Austere",
-    "pronunciation": "/ɔːˈstɪr/",
-    "partOfSpeech": "adjective",
-    "definition": "plain and without decoration; strict or severe",
-    "arabic": "زاهد / بسيط",
-    "russian": "строгий / суровый",
-    "uzbek": "hashamatdan xoli / qat’iy",
-    "sentence": "The austere room kept attention on the paintings.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Benevolent",
-    "pronunciation": "/bəˈnevələnt/",
-    "partOfSpeech": "adjective",
-    "definition": "well meaning and kindly",
-    "arabic": "خير / عطوف",
-    "russian": "благожелательный",
-    "uzbek": "mehribon / xayrixoh",
-    "sentence": "A benevolent neighbor organized meals for the family.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Candid",
-    "pronunciation": "/ˈkændɪd/",
-    "partOfSpeech": "adjective",
-    "definition": "truthful and straightforward; frank",
-    "arabic": "صريح / صادق",
-    "russian": "откровенный",
-    "uzbek": "samimiy / ochiq",
-    "sentence": "In a candid interview, the author discussed the book's flaws.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Censure",
-    "pronunciation": "/ˈsenʃər/",
-    "partOfSpeech": "verb",
-    "definition": "to express strong disapproval of someone or something",
-    "arabic": "يدين / يلوم",
-    "russian": "порицать / осуждать",
-    "uzbek": "qoralamoq / tanqid qilmoq",
-    "sentence": "The board voted to censure the member for breaking its rules.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Coherent",
-    "pronunciation": "/koʊˈhɪrənt/",
-    "partOfSpeech": "adjective",
-    "definition": "logical, consistent, and easy to understand",
-    "arabic": "مترابط / متماسك",
-    "russian": "связный / последовательный",
-    "uzbek": "izchil / mantiqli",
-    "sentence": "The report presents a coherent explanation of the results.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Concise",
-    "pronunciation": "/kənˈsaɪs/",
-    "partOfSpeech": "adjective",
-    "definition": "giving much information clearly in few words",
-    "arabic": "موجز / مختصر",
-    "russian": "краткий / лаконичный",
-    "uzbek": "qisqa va aniq",
-    "sentence": "A concise summary helped the committee grasp the findings.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Concur",
-    "pronunciation": "/kənˈkɜːr/",
-    "partOfSpeech": "verb",
-    "definition": "to agree, especially after considering an issue",
-    "arabic": "يوافق / يتفق",
-    "russian": "соглашаться",
-    "uzbek": "fikriga qo‘shilmoq",
-    "sentence": "Several reviewers concur that the novel is her strongest work.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Conspicuous",
-    "pronunciation": "/kənˈspɪkjuəs/",
-    "partOfSpeech": "adjective",
-    "definition": "clearly visible or attracting notice",
-    "arabic": "بارز / ملحوظ",
-    "russian": "заметный / бросающийся в глаза",
-    "uzbek": "ko‘zga tashlanadigan",
-    "sentence": "The bright sign was conspicuous against the gray wall.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Credible",
-    "pronunciation": "/ˈkredəbəl/",
-    "partOfSpeech": "adjective",
-    "definition": "able to be believed; convincing",
-    "arabic": "جدير بالتصديق",
-    "russian": "достоверный / убедительный",
-    "uzbek": "ishonchli / asosli",
-    "sentence": "The researcher offered a credible explanation for the result.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Diligent",
-    "pronunciation": "/ˈdɪlɪdʒənt/",
-    "partOfSpeech": "adjective",
-    "definition": "showing careful and persistent effort",
-    "arabic": "مجتهد / دؤوب",
-    "russian": "усердный / старательный",
-    "uzbek": "tirishqoq / mehnatsevar",
-    "sentence": "Through diligent practice, he improved his reading speed.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Elucidate",
-    "pronunciation": "/ɪˈluːsɪdeɪt/",
-    "partOfSpeech": "verb",
-    "definition": "to make something clear or easier to understand",
-    "arabic": "يوضّح / يشرح",
-    "russian": "разъяснять / прояснять",
-    "uzbek": "oydinlashtirmoq / tushuntirmoq",
-    "sentence": "The diagram helps elucidate the steps in the process.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Eloquent",
-    "pronunciation": "/ˈeləkwənt/",
-    "partOfSpeech": "adjective",
-    "definition": "fluent or persuasive in speaking or writing",
-    "arabic": "بليغ / فصيح",
-    "russian": "красноречивый",
-    "uzbek": "notiq / ta’sirli",
-    "sentence": "Her eloquent letter persuaded the town to preserve its library.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Empirical",
-    "pronunciation": "/ɪmˈpɪrɪkəl/",
-    "partOfSpeech": "adjective",
-    "definition": "based on observation or experiment rather than theory",
-    "arabic": "تجريبي / قائم على الملاحظة",
-    "russian": "эмпирический",
-    "uzbek": "tajribaga asoslangan",
-    "sentence": "The team collected empirical evidence before revising its theory.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Enigmatic",
-    "pronunciation": "/ˌenɪɡˈmætɪk/",
-    "partOfSpeech": "adjective",
-    "definition": "difficult to interpret or understand; mysterious",
-    "arabic": "غامض / محيّر",
-    "russian": "загадочный",
-    "uzbek": "sirli / jumboqli",
-    "sentence": "The poem's enigmatic final line prompted many interpretations.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Ephemeral",
-    "pronunciation": "/ɪˈfemərəl/",
-    "partOfSpeech": "adjective",
-    "definition": "lasting for a very short time",
-    "arabic": "عابر / قصير الأمد",
-    "russian": "мимолётный / недолговечный",
-    "uzbek": "o‘tkinchi / qisqa muddatli",
-    "sentence": "The ephemeral blossoms lasted only a few days.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Equivocal",
-    "pronunciation": "/ɪˈkwɪvəkəl/",
-    "partOfSpeech": "adjective",
-    "definition": "open to more than one interpretation; ambiguous",
-    "arabic": "ملتبس / غامض",
-    "russian": "двусмысленный / неоднозначный",
-    "uzbek": "ikki ma’noli / noaniq",
-    "sentence": "The witness gave an equivocal answer that left the jury uncertain.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Exacerbate",
-    "pronunciation": "/ɪɡˈzæsərbeɪt/",
-    "partOfSpeech": "verb",
-    "definition": "to make a problem, bad situation, or feeling worse",
-    "arabic": "يفاقم / يزيد سوءًا",
-    "russian": "усугублять",
-    "uzbek": "kuchaytirmoq / yomonlashtirmoq",
-    "sentence": "Ignoring the leak would only exacerbate the damage.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Fastidious",
-    "pronunciation": "/fæˈstɪdiəs/",
-    "partOfSpeech": "adjective",
-    "definition": "very attentive to detail and difficult to please",
-    "arabic": "دقيق / شديد التدقيق",
-    "russian": "щепетильный / разборчивый",
-    "uzbek": "sinchkov / talabchan",
-    "sentence": "The fastidious proofreader caught even the smallest errors.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Formidable",
-    "pronunciation": "/ˈfɔːrmɪdəbəl/",
-    "partOfSpeech": "adjective",
-    "definition": "inspiring fear or respect through impressive size or power",
-    "arabic": "مهيب / هائل",
-    "russian": "грозный / внушительный",
-    "uzbek": "salobatli / dahshatli",
-    "sentence": "Their formidable opponent had won every match that season.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Impartial",
-    "pronunciation": "/ɪmˈpɑːrʃəl/",
-    "partOfSpeech": "adjective",
-    "definition": "treating all sides fairly and without bias",
-    "arabic": "محايد / منصف",
-    "russian": "беспристрастный",
-    "uzbek": "xolis / adolatli",
-    "sentence": "An impartial mediator helped both groups reach an agreement.",
-    "status": "new",
-    "synonyms": ""
-  },
-  {
-    "word": "Lucid",
-    "pronunciation": "/ˈluːsɪd/",
-    "partOfSpeech": "adjective",
-    "definition": "clearly expressed and easy to understand",
-    "arabic": "واضح / جليّ",
-    "russian": "ясный / понятный",
-    "uzbek": "ravshan / tushunarli",
-    "sentence": "The textbook gives a lucid account of a complicated idea.",
-    "status": "new",
-    "synonyms": ""
-  },
+// pdf deck. Add or edit entries in this file.
+window.VOCABULARY_SETS = window.VOCABULARY_SETS || {};
+window.VOCABULARY_SETS.pdf = [
   {
     "word": "Reverence",
     "pronunciation": "",
@@ -418,6 +59,18 @@ window.VOCABULARY = [
     "russian": "",
     "uzbek": "",
     "sentence": "The cashier was indignant when the customer accused her of giving him the wrong change.",
+    "status": "new"
+  },
+  {
+    "word": "Admonish",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "to warn or scold someone",
+    "synonyms": "reprove, scold, reprimand",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The teacher had to admonish the student for repeatedly disrupting the class.",
     "status": "new"
   },
   {
@@ -1705,6 +1358,18 @@ window.VOCABULARY = [
     "status": "new"
   },
   {
+    "word": "Impartial",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "able to judge something fairly",
+    "synonyms": "unbiased, neutral, objective",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The judge promised to remain impartial throughout the trial, considering all evidence fairly.",
+    "status": "new"
+  },
+  {
     "word": "Coarse",
     "pronunciation": "",
     "partOfSpeech": "",
@@ -1750,6 +1415,18 @@ window.VOCABULARY = [
     "russian": "",
     "uzbek": "",
     "sentence": "She was so preoccupied with her new business idea that she barely noticed the conversation around her.",
+    "status": "new"
+  },
+  {
+    "word": "elucidate",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "clarify",
+    "synonyms": "explain, clarify, illustrate",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The professor’s detailed explanation helped to elucidate the complex theory for the students.",
     "status": "new"
   },
   {
@@ -1822,6 +1499,18 @@ window.VOCABULARY = [
     "russian": "",
     "uzbek": "",
     "sentence": "The CEO considered himself immune to criticism after years of successful business deals.",
+    "status": "new"
+  },
+  {
+    "word": "Credible",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "Believable",
+    "synonyms": "plausible, probable, believable",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The witness provided a credible account of the accident, making her testimony believable.",
     "status": "new"
   },
   {
@@ -2785,6 +2474,18 @@ window.VOCABULARY = [
     "status": "new"
   },
   {
+    "word": "Arduous",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "Very difficult",
+    "synonyms": "difficult, challenging, tough",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The hike up the steep, icy mountain was arduous and tested the endurance of the entire climbing team.",
+    "status": "new"
+  },
+  {
     "word": "verbose",
     "pronunciation": "",
     "partOfSpeech": "",
@@ -3625,6 +3326,18 @@ window.VOCABULARY = [
     "status": "new"
   },
   {
+    "word": "Eloquent",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "fluent or persuasive in speaking or writing",
+    "synonyms": "articulate, fluent, expressive",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The speaker delivered an eloquent address that moved the audience to action.",
+    "status": "new"
+  },
+  {
     "word": "Persuasive",
     "pronunciation": "",
     "partOfSpeech": "",
@@ -4381,6 +4094,18 @@ window.VOCABULARY = [
     "status": "new"
   },
   {
+    "word": "amiable",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "friendly",
+    "synonyms": "gracious, pleasant, nice",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The amiable host made everyone feel welcome at the party.",
+    "status": "new"
+  },
+  {
     "word": "despondent",
     "pronunciation": "",
     "partOfSpeech": "",
@@ -4426,6 +4151,18 @@ window.VOCABULARY = [
     "russian": "",
     "uzbek": "",
     "sentence": "The activists will agitate for better environmental policies.",
+    "status": "new"
+  },
+  {
+    "word": "Benevolent",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "Kind, charitable",
+    "synonyms": "kind, charitable, philanthropic",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "He belonged to several benevolent societies and charitable organizations.",
     "status": "new"
   },
   {
@@ -6121,6 +5858,18 @@ window.VOCABULARY = [
     "status": "new"
   },
   {
+    "word": "alacrity",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "eagerness",
+    "synonyms": "eagerness, readiness, swiftness",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "She accepted the invitation with alacrity, eager to attend the long-awaited event.",
+    "status": "new"
+  },
+  {
     "word": "Manifest in",
     "pronunciation": "",
     "partOfSpeech": "",
@@ -6466,6 +6215,18 @@ window.VOCABULARY = [
     "russian": "",
     "uzbek": "",
     "sentence": "They gave her the highest honor they can bestow.",
+    "status": "new"
+  },
+  {
+    "word": "Anomaly",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "oddity, something that is not normal",
+    "synonyms": "exception, abnormality, rarity",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The sudden drop in temperature was an anomaly for this time of year.",
     "status": "new"
   },
   {
@@ -7309,6 +7070,18 @@ window.VOCABULARY = [
     "status": "new"
   },
   {
+    "word": "Austere",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "plain and without decoration, comforts, or anything extra",
+    "synonyms": "strict, harsh, tough",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The monastery was known for its austere architecture and simple furnishings.",
+    "status": "new"
+  },
+  {
     "word": "Disdain",
     "pronunciation": "",
     "partOfSpeech": "",
@@ -7630,6 +7403,18 @@ window.VOCABULARY = [
     "russian": "",
     "uzbek": "",
     "sentence": "The barren landscape was devoid of any vegetation.",
+    "status": "new"
+  },
+  {
+    "word": "Abate",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "to become less intense or widespread",
+    "synonyms": "subside, decrease, lessen",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The storm suddenly began to abate, allowing the residents to leave their shelters.",
     "status": "new"
   },
   {
@@ -8578,6 +8363,18 @@ window.VOCABULARY = [
     "russian": "",
     "uzbek": "",
     "sentence": "He inadvertently left the keys inside the locked car.",
+    "status": "new"
+  },
+  {
+    "word": "Exacerbate",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "to make something that is already bad worse",
+    "synonyms": "worsen, aggravate, intensify",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The lack of rain will only exacerbate the severe drought conditions in the region.",
     "status": "new"
   },
   {
@@ -9973,6 +9770,18 @@ window.VOCABULARY = [
     "status": "new"
   },
   {
+    "word": "Articulate",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "having the ability to speak fluently and persuasively",
+    "synonyms": "eloquent, fluent, well-spoken",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The politician was known for his articulate speeches, which allowed him to sway public opinion effortlessly.",
+    "status": "new"
+  },
+  {
     "word": "insipid",
     "pronunciation": "",
     "partOfSpeech": "",
@@ -10102,6 +9911,18 @@ window.VOCABULARY = [
     "russian": "",
     "uzbek": "",
     "sentence": "The artist chose a felicitous blend of colors that perfectly captured the joy of the spring day.",
+    "status": "new"
+  },
+  {
+    "word": "fastidious",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "careful",
+    "synonyms": "meticulous, picky, careful",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "He is fastidious about keeping the house clean.",
     "status": "new"
   },
   {
@@ -10402,6 +10223,18 @@ window.VOCABULARY = [
     "russian": "",
     "uzbek": "",
     "sentence": "The sudden sense of security proved to be illusory, vanishing as quickly as it appeared.",
+    "status": "new"
+  },
+  {
+    "word": "Empirical",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "based experience rather than theory or pure logic",
+    "synonyms": "observational, objective, experimental",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The scientist relied empirical data collected from years of experiments to support her hypothesis, rather than purely theoretical models.",
     "status": "new"
   },
   {
@@ -12217,6 +12050,18 @@ window.VOCABULARY = [
     "status": "new"
   },
   {
+    "word": "Concur",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "Agree",
+    "synonyms": "agree, consent, approve",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The judges all concur with the jury’s verdict.",
+    "status": "new"
+  },
+  {
     "word": "Prospect",
     "pronunciation": "",
     "partOfSpeech": "",
@@ -13213,6 +13058,18 @@ window.VOCABULARY = [
     "status": "new"
   },
   {
+    "word": "Equivocal",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "open to more than one interpretation; unclear",
+    "synonyms": "ambiguous, uncertain, dubious",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The politician’s response was equivocal, leaving reporters unsure of his true stance the issue.",
+    "status": "new"
+  },
+  {
     "word": "Veritable",
     "pronunciation": "",
     "partOfSpeech": "",
@@ -13390,6 +13247,18 @@ window.VOCABULARY = [
     "russian": "",
     "uzbek": "",
     "sentence": "Many employers are realizing the effects that stress has their employees and are instituting stress management programs in the workplace.",
+    "status": "new"
+  },
+  {
+    "word": "Diligent",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "hard-working",
+    "synonyms": "assiduous, industrious, conscientious",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The diligent student spent every evening reviewing her notes for the exam.",
     "status": "new"
   },
   {
@@ -13654,6 +13523,18 @@ window.VOCABULARY = [
     "russian": "",
     "uzbek": "",
     "sentence": "The enthusiasm for the project was waning after several unexpected delays.",
+    "status": "new"
+  },
+  {
+    "word": "acumen",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "insightfulness",
+    "synonyms": "intelligence, wit, insight",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "Her political acumen allowed her to foresee the shift in public opinion.",
     "status": "new"
   },
   {
@@ -14194,6 +14075,18 @@ window.VOCABULARY = [
     "russian": "",
     "uzbek": "",
     "sentence": "Her tenacious refusal to give up, even after several failures, eventually led to her success.",
+    "status": "new"
+  },
+  {
+    "word": "Conspicuous",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "Obvious, noticeable",
+    "synonyms": "noticeable, prominent, remarkable",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The red stain the white carpet was conspicuous.",
     "status": "new"
   },
   {
@@ -17257,6 +17150,18 @@ window.VOCABULARY = [
     "status": "new"
   },
   {
+    "word": "Ephemeral",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "temporary, short-lived",
+    "synonyms": "fleeting, temporary, brief",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The beauty of the cherry blossoms is ephemeral, lasting only a few short weeks.",
+    "status": "new"
+  },
+  {
     "word": "tractable",
     "pronunciation": "",
     "partOfSpeech": "",
@@ -18061,6 +17966,18 @@ window.VOCABULARY = [
     "status": "new"
   },
   {
+    "word": "enigmatic",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "mystery, mysterious",
+    "synonyms": "mystery, puzzle, riddle",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The brain is, at least to me, an enigma wrapped in a mystery.",
+    "status": "new"
+  },
+  {
     "word": "aura",
     "pronunciation": "",
     "partOfSpeech": "",
@@ -18106,6 +18023,18 @@ window.VOCABULARY = [
     "russian": "",
     "uzbek": "",
     "sentence": "The lumberjack used an ax to cleave the log for firewood.",
+    "status": "new"
+  },
+  {
+    "word": "Censure",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "Strong criticism",
+    "synonyms": "reprimand, criticize, condemnation",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "His dishonest behavior came under severe censure.",
     "status": "new"
   },
   {
@@ -18685,6 +18614,18 @@ window.VOCABULARY = [
     "status": "new"
   },
   {
+    "word": "lucid",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "clear, easily understood",
+    "synonyms": "clear, obvious, apparent",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "Her explanation of the complex theory was so lucid that everyone in the room understood it immediately.",
+    "status": "new"
+  },
+  {
     "word": "Contentious",
     "pronunciation": "",
     "partOfSpeech": "",
@@ -18778,6 +18719,18 @@ window.VOCABULARY = [
     "russian": "",
     "uzbek": "",
     "sentence": "His duplicitous claims about his qualifications were deliberately deceptive, leading to his immediate dismissal from the position.",
+    "status": "new"
+  },
+  {
+    "word": "aberration",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "deviation, not normal",
+    "synonyms": "oddity, abnormality, anomaly",
+    "arabic": "",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The sudden drop in temperature was an aberration from the usual warm weather this time of year.",
     "status": "new"
   },
   {
