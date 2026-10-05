@@ -7,6 +7,7 @@
   const dialog = document.getElementById('detail');
   const study = document.getElementById('study');
   let filter = 'all', selectedDeck = 'pdf', current = null, session = [], sessionIndex = 0;
+  let changingCard = false;
   let statuses = {}, reviews = {};
   try { statuses = JSON.parse(localStorage.getItem('verba-status') || '{}'); } catch {}
   try { reviews = JSON.parse(localStorage.getItem('verba-reviews') || '{}'); } catch {}
@@ -15,6 +16,10 @@
   const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, char =>
     ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const deckWords = () => selectedDeck === 'all' ? allWords : sets[selectedDeck];
+  const reduceMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function animate(element, frames, options) {
+    return reduceMotion() ? Promise.resolve() : element.animate(frames, options).finished.catch(() => {});
+  }
 
   function parseRange(value, length) {
     const match = value.trim().match(/^(\d+)\s*(?:-\s*(\d+))?$/);
@@ -125,12 +130,15 @@
     }
     session = available;
     sessionIndex = 0;
+    changingCard = false;
     document.getElementById('study-setup').hidden = true;
     document.querySelector('.study-progress').hidden = false;
+    document.querySelector('.study-progress-track').hidden = false;
     document.getElementById('study-finished').hidden = true;
     document.querySelector('.flashcard').hidden = session.length === 0;
     document.getElementById('review-actions').hidden = true;
     if (!session.length) {
+      document.querySelector('.study-progress-track').hidden = true;
       document.getElementById('study-finished').hidden = false;
       document.getElementById('study-finished').querySelector('strong').textContent = 'All caught up';
       document.getElementById('study-finished').querySelector('span').textContent = 'No words are due right now. Come back later for your next spaced review.';
@@ -141,12 +149,16 @@
     const word = session[sessionIndex];
     document.getElementById('study-count').textContent = 'Card ' + (sessionIndex + 1) + ' of ' + session.length;
     document.getElementById('study-due').textContent = session.length + ' selected';
+    document.getElementById('study-progress-fill').style.width = ((sessionIndex + 1) / session.length * 100) + '%';
     document.getElementById('flash-word').textContent = word.word;
     document.getElementById('flashcard-label').textContent = 'TRY TO RECALL THE MEANING';
     document.getElementById('flash-answer').hidden = true;
     document.getElementById('review-actions').hidden = true;
     document.getElementById('reveal').hidden = false;
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelector('.flashcard').animate([{opacity:.35,transform:'translateY(14px) rotateX(-3deg)'},{opacity:1,transform:'translateY(0) rotateX(0)'}],{duration:320,easing:'cubic-bezier(.2,.75,.25,1)'});
+    animate(document.querySelector('.flashcard'), [
+      {opacity:0,transform:'translateX(34px) scale(.96)'},
+      {opacity:1,transform:'translateX(0) scale(1)'}
+    ], {duration:380,easing:'cubic-bezier(.18,.8,.25,1)'});
   }
 
   function revealAnswer() {
@@ -156,13 +168,16 @@
     answer.querySelector('.flash-translations').innerHTML = [['Russian',word.russian],['Uzbek',word.uzbek]].filter(x=>x[1]).map(([label,value])=>'<div><b>'+label+'</b><span>'+escapeHTML(value)+'</span></div>').join('');
     answer.querySelector('.flash-example').textContent = word.sentence || '';
     answer.hidden = false;
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) answer.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:260,easing:'ease-out'});
+    animate(answer, [{opacity:0,transform:'translateY(18px) scale(.97)'},{opacity:1,transform:'translateY(0) scale(1)'}], {duration:340,easing:'cubic-bezier(.18,.8,.25,1)'});
     document.getElementById('flashcard-label').textContent = word.partOfSpeech || 'WORD';
     document.getElementById('reveal').hidden = true;
     document.getElementById('review-actions').hidden = false;
+    animate(document.getElementById('review-actions'), [{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}], {duration:300,easing:'ease-out'});
   }
 
-  function rateCard(rating) {
+  async function rateCard(rating) {
+    if (changingCard) return;
+    changingCard = true;
     const word = session[sessionIndex];
     const prev = reviews[word.word] || {box:0};
     const intervals = [1,3,7,14,30,60];
@@ -177,15 +192,21 @@
     reviews[word.word] = {box, due:Date.now()+delay, seen:(prev.seen||0)+1};
     localStorage.setItem('verba-reviews', JSON.stringify(reviews));
     localStorage.setItem('verba-status', JSON.stringify(statuses));
+    await animate(document.querySelector('.flashcard'), [
+      {opacity:1,transform:'translateX(0) scale(1)'},
+      {opacity:0,transform:'translateX(' + (rating === 'again' ? '-38px' : '38px') + ') scale(.96)'}
+    ], {duration:230,easing:'ease-in'});
     sessionIndex++;
     if (sessionIndex >= session.length) {
       document.querySelector('.flashcard').hidden = true;
       document.getElementById('review-actions').hidden = true;
+      document.querySelector('.study-progress-track').hidden = true;
       document.getElementById('study-finished').hidden = false;
       document.getElementById('study-finished').querySelector('strong').textContent = 'Session complete';
       document.getElementById('study-finished').querySelector('span').textContent = 'You reviewed ' + session.length + ' words. Your next reviews are scheduled automatically.';
       document.getElementById('study-finished').querySelector('button').textContent = 'Choose another session';
     } else showStudyCard();
+    changingCard = false;
     draw();
   }
 
@@ -214,11 +235,12 @@
     document.getElementById('study-finished').hidden = true;
     document.getElementById('study-setup').hidden = false;
     document.querySelector('.study-progress').hidden = true;
+    document.querySelector('.study-progress-track').hidden = true;
   };
-  document.getElementById('study-close').onclick = () => study.close();
+  document.getElementById('study-home').onclick = () => study.close();
   document.getElementById('reveal').onclick = revealAnswer;
   document.querySelectorAll('.review-actions button').forEach(button => button.onclick = () => rateCard(button.dataset.rating));
-  study.onclick = event => { if (event.target === study) study.close(); };
+  study.addEventListener('cancel', event => event.preventDefault());
   document.addEventListener('keydown', event => { if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); query.focus(); } });
   draw();
 })();

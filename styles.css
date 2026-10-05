@@ -19,3 +19,22 @@ dialog{background:#102319;color:#e5f0e8;border-color:#294638;box-shadow:0 24px 8
 @media(prefers-reduced-motion:reduce){#study .flashcard,#study .review-actions button{animation:none!important;transition:none!important}}
 #study .flashcard[hidden],#study .review-actions[hidden]{display:none!important}
 .source-number{margin-left:auto;margin-right:7px;color:#86ad94;font:600 9px var(--font)}
+
+/* Study navigation and motion */
+#study .dialog-top{position:relative;z-index:1}
+#study .study-home{width:auto;height:36px;padding:0 15px;border:1px solid #47795c;border-radius:9px;background:#1c4930;color:#d7f3df;font:700 12px var(--font);letter-spacing:0;transition:background .2s,transform .2s,border-color .2s}
+#study .study-home:hover,#study .study-home:focus-visible{background:#286841;border-color:#80d6a0;transform:translateY(-2px);outline:none}
+#study .study-progress{margin-bottom:10px}
+#study .study-progress-track{width:min(656px,calc(100% - 82px));height:6px;margin:0 auto 2vh;border-radius:999px;background:#254431;overflow:hidden}
+#study .study-progress-track[hidden]{display:none}
+#study .study-progress-track span{display:block;width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,#4bab70,#a2e4b4);transition:width .45s cubic-bezier(.18,.8,.25,1)}
+#study[open]{animation:studyEnter .38s cubic-bezier(.18,.8,.25,1) both}
+#study[open] .study-setup{animation:setupEnter .46s cubic-bezier(.18,.8,.25,1) both}
+#study[open] .study-finished:not([hidden]){animation:setupEnter .42s cubic-bezier(.18,.8,.25,1) both}
+#study .reveal-button{transition:transform .2s,background .2s,box-shadow .2s}
+#study .reveal-button:hover,#study .reveal-button:focus-visible{transform:translateY(-3px);box-shadow:0 9px 28px #4aaf7333;outline:2px solid #99e6b1;outline-offset:2px}
+#study .review-actions button:active{transform:scale(.96)}
+@keyframes studyEnter{from{opacity:0}to{opacity:1}}
+@keyframes setupEnter{from{opacity:0;transform:translateY(20px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:600px){#study .study-progress-track{width:calc(100% - 66px)}#study .study-home{height:34px}}
+@media(prefers-reduced-motion:reduce){#study[open],#study[open] .study-setup,#study[open] .study-finished:not([hidden]){animation:none!important}#study .study-progress-track span{transition:none!important}}
