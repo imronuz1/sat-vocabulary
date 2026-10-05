@@ -17,4 +17,4 @@ Open `index.html` in a modern browser. The app uses plain HTML, CSS, and JavaScr
 
 ## Vocabulary data
 
-Edit the files in `data/` to update a deck. Counts are calculated from the unique vocabulary entries. The KernelSAT PDF has 1500 source entries expanded into 1575 study terms because some entries include multiple related forms. The P&S Digital SAT Part 1 deck preserves the 97 numbered rows present in the supplied PDF.
+Edit the files in `data/` to update a deck. Counts are calculated from the unique vocabulary entries. The KernelSAT PDF has 1500 source entries expanded into 1575 study terms because some entries include multiple related forms. The P&S Digital SAT Part 1 deck contains the complete numbered sequence of 115 entries.
