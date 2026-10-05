@@ -1,6 +1,6 @@
 (() => {
   const sets = window.VOCABULARY_SETS || { pdf: window.VOCABULARY || [], original: [] };
-  const allWords = [...new Map([...sets.original, ...sets.pdf].map(word => [word.word.toLocaleLowerCase(), word])).values()];
+  const allWords = [...new Map([...sets.original, ...sets.pdf, ...sets.pspart1].map(word => [word.word.toLocaleLowerCase(), word])).values()];
   const grid = document.getElementById('grid');
   const query = document.getElementById('query');
   const sort = document.getElementById('sort');
@@ -57,6 +57,7 @@
     document.getElementById('deck-all-count').textContent = allWords.length;
     document.getElementById('deck-pdf-count').textContent = sets.pdf.length;
     document.getElementById('deck-original-count').textContent = sets.original.length;
+    document.getElementById('deck-pspart1-count').textContent = sets.pspart1.length;
   }
 
   function row(label, value, cls = '', attr = '', synonyms = '') {
@@ -76,7 +77,7 @@
     if (sort.value === 'az') visible.sort((a, b) => a.word.localeCompare(b.word));
     if (sort.value === 'za') visible.sort((a, b) => b.word.localeCompare(a.word));
     if (sort.value === 'random') visible.sort((a, b) => (a.randomKey ??= Math.random()) - (b.randomKey ??= Math.random()));
-    grid.innerHTML = visible.map(word => '<article class="card" tabindex="0" role="button" data-word="' + escapeHTML(word.word) + '" aria-label="Study ' + escapeHTML(word.word) + '"><div class="card-head"><span class="card-word">' + escapeHTML(word.word) + '</span><span class="status ' + status(word.word) + '">' + status(word.word) + '</span></div>' + row('Definition', word.definition, '', '', word.synonyms) + row('Russian', word.russian, '', 'lang="ru"') + row('Uzbek', word.uzbek, '', 'lang="uz"') + row('Example', word.sentence, 'example') + '</article>').join('');
+    grid.innerHTML = visible.map(word => '<article class="card" tabindex="0" role="button" data-word="' + escapeHTML(word.word) + '" aria-label="Study ' + escapeHTML(word.word) + '"><div class="card-head"><span class="card-word">' + escapeHTML(word.word) + '</span>' + (word.sourceNumber ? '<span class="source-number">#' + word.sourceNumber + '</span>' : '') + '<span class="status ' + status(word.word) + '">' + status(word.word) + '</span></div>' + row('Definition', word.definition, '', '', word.synonyms) + row('Russian', word.russian, '', 'lang="ru"') + row('Uzbek', word.uzbek, '', 'lang="uz"') + row('Example', word.sentence, 'example') + '</article>').join('');
     document.getElementById('empty').hidden = visible.length > 0;
     grid.hidden = visible.length === 0;
     document.getElementById('results').textContent = (needle || filter !== 'all' || selectedDeck !== 'all') ? 'Showing ' + visible.length + ' of ' + scoped.length + ' words' : 'Showing all ' + visible.length + ' words';
@@ -139,12 +140,13 @@
   function showStudyCard() {
     const word = session[sessionIndex];
     document.getElementById('study-count').textContent = 'Card ' + (sessionIndex + 1) + ' of ' + session.length;
-    document.getElementById('study-due').textContent = 'Due now · ' + session.length + ' selected';
+    document.getElementById('study-due').textContent = session.length + ' selected';
     document.getElementById('flash-word').textContent = word.word;
     document.getElementById('flashcard-label').textContent = 'TRY TO RECALL THE MEANING';
     document.getElementById('flash-answer').hidden = true;
     document.getElementById('review-actions').hidden = true;
     document.getElementById('reveal').hidden = false;
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelector('.flashcard').animate([{opacity:.35,transform:'translateY(14px) rotateX(-3deg)'},{opacity:1,transform:'translateY(0) rotateX(0)'}],{duration:320,easing:'cubic-bezier(.2,.75,.25,1)'});
   }
 
   function revealAnswer() {
@@ -154,6 +156,7 @@
     answer.querySelector('.flash-translations').innerHTML = [['Russian',word.russian],['Uzbek',word.uzbek]].filter(x=>x[1]).map(([label,value])=>'<div><b>'+label+'</b><span>'+escapeHTML(value)+'</span></div>').join('');
     answer.querySelector('.flash-example').textContent = word.sentence || '';
     answer.hidden = false;
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) answer.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:260,easing:'ease-out'});
     document.getElementById('flashcard-label').textContent = word.partOfSpeech || 'WORD';
     document.getElementById('reveal').hidden = true;
     document.getElementById('review-actions').hidden = false;
