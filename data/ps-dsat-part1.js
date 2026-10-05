@@ -1,6 +1,6 @@
-// P&S Digital SAT Vocabulary Master Guide, Part 1. Order follows the PDF.
-window.VOCABULARY_SETS=window.VOCABULARY_SETS||{};
-window.VOCABULARY_SETS.pspart1=[
+// P&S Digital SAT Vocabulary Master Guide, Part 1. The complete 1–115 sequence.
+window.VOCABULARY_SETS = window.VOCABULARY_SETS || {};
+window.VOCABULARY_SETS.pspart1 = [
   {
     "sourceNumber": 1,
     "word": "Reverence",
@@ -8,8 +8,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "deep respect for someone or something",
     "synonyms": "awe, respect, worship",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The entire community felt a deep reverence for the elder, whose wisdom guided them for decades.",
     "status": "new"
   },
@@ -20,8 +20,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Unreasonably high cost",
     "synonyms": "excessive, extreme, steep",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The customer complained about the exorbitant price of a single bottle of water at the concert venue.",
     "status": "new"
   },
@@ -32,8 +32,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "an opinion or conclusion that is unproven, a guess",
     "synonyms": "guess, theory, surmise",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The scientist’s theory was still a mere conjecture, lacking concrete evidence to support it.",
     "status": "new"
   },
@@ -44,8 +44,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "boring, slow, and tiring",
     "synonyms": "boring, tiring, dull",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The tedious task of sorting through hundreds of documents took all afternoon.",
     "status": "new"
   },
@@ -56,8 +56,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "angered (by injustice)",
     "synonyms": "angry, outraged, furious",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The cashier was indignant when the customer accused her of giving him the wrong change.",
     "status": "new"
   },
@@ -68,8 +68,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "to warn or scold someone",
     "synonyms": "reprove, scold, reprimand",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The teacher had to admonish the student for repeatedly disrupting the class.",
     "status": "new"
   },
@@ -80,8 +80,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Diminished in number or quantity.",
     "synonyms": "drained, diminished, consumed",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "After the long drought, the reservoir was severely depleted of water.",
     "status": "new"
   },
@@ -92,8 +92,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "deep respect",
     "synonyms": "deference, homage, respect",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The villagers performed an act of obeisance to the visiting monarch.",
     "status": "new"
   },
@@ -104,9 +104,45 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Flood",
     "synonyms": "flow, gush, flood",
-    "uzbek": "",
     "russian": "",
-    "sentence": "After the tragedy, there was an",
+    "uzbek": "",
+    "sentence": "After the tragedy, there was an outpouring of grief and support from the community.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 10,
+    "word": "belligerent",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "aggressive, warlike",
+    "synonyms": "aggressive, hostile, combative",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The belligerent nation refused to negotiate and instead prepared for war.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 11,
+    "word": "lull",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "short period of calm",
+    "synonyms": "calm, pause, quiet",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "There was a brief lull in the storm before the heavy rain started again.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 12,
+    "word": "rectify, rectitude",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "put right, correct",
+    "synonyms": "amend, correct, remedy",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "We need to rectify the error in the accounting records before the audit.",
     "status": "new"
   },
   {
@@ -116,8 +152,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "mortification",
     "synonyms": "disappointment, frustration, embarrassment",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "To her chagrin, she realized she had sent the embarrassing email to her entire office instead of just her friend.",
     "status": "new"
   },
@@ -128,8 +164,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Difference",
     "synonyms": "difference, distinction, diversity",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "There was a noticeable discrepancy between the bank statement and her personal ledger.",
     "status": "new"
   },
@@ -140,8 +176,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Deliberately created rather than arising naturally or spontaneously.",
     "synonyms": "artificial, forced, strained",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The ending of the movie felt contrived and unconvincing.",
     "status": "new"
   },
@@ -152,8 +188,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Involve, require",
     "synonyms": "involve, include, encompass",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "Running a marathon will entail months of rigorous training and preparation.",
     "status": "new"
   },
@@ -164,8 +200,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "blameworthy",
     "synonyms": "guilty, blameworthy, responsible",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The jury found the defendant culpable for neglecting their duties.",
     "status": "new"
   },
@@ -176,8 +212,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "indulgent",
     "synonyms": "merciful, tolerant, permissive",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The principal was too lenient, allowing the students to get away with minor infractions.",
     "status": "new"
   },
@@ -188,8 +224,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "to cause a reaction or emotion (usually anger); to trigger",
     "synonyms": "incite, infuriate, stimulate",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The politician’s controversial statements were meant to provoke a strong reaction from the public.",
     "status": "new"
   },
@@ -200,8 +236,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "To keep from sight; to hide.",
     "synonyms": "hide, mask, cover",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "He tried to conceal his nervousness during the presentation.",
     "status": "new"
   },
@@ -212,8 +248,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "To look at something closely, typically to assess its condition.",
     "synonyms": "examine, check, scrutinize",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The building inspector will arrive tomorrow to thoroughly inspect the foundations for any cracks or damage.",
     "status": "new"
   },
@@ -224,9 +260,21 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "talk intended to seem important or threatening but which is not taken seriously and has little effect",
     "synonyms": "bragging, boasting, bombast",
-    "uzbek": "",
     "russian": "",
-    "sentence": "His constant bluster about his achievements was ignored by his",
+    "uzbek": "",
+    "sentence": "His constant bluster about his achievements was ignored by his colleagues, who knew he rarely followed through.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 23,
+    "word": "Redundancy",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "Unnecessary repetition",
+    "synonyms": "repetition, excess, surplus",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The redundancy in the report’s conclusion, repeating points already made in the introduction, made it unnecessarily long.",
     "status": "new"
   },
   {
@@ -236,8 +284,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Claims or proves that evidence is false.",
     "synonyms": "refutes, contradicts, disproves",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The defense lawyer successfully rebuts the prosecution’s key witness testimony by presenting contradictory DNA evidence.",
     "status": "new"
   },
@@ -248,8 +296,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "to correct a wrong",
     "synonyms": "reparation, compensation, remedy",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The victim sought monetary redress for the damage caused by the accident.",
     "status": "new"
   },
@@ -260,8 +308,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Conforming to the law or to rules.",
     "synonyms": "legal, lawful, authorized",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The court ruled that the contract was legitimate and legally binding.",
     "status": "new"
   },
@@ -272,8 +320,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Precision, accuracy",
     "synonyms": "accuracy, precision, exactness",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The scientist performed the measurements with such exactitude that there was no room for error.",
     "status": "new"
   },
@@ -284,8 +332,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Touchable, obvious",
     "synonyms": "tangible, manifest, evident",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The tension in the room was palpable as the results were about to be announced.",
     "status": "new"
   },
@@ -296,8 +344,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Implied, not stated",
     "synonyms": "unspoken, implied, tacit",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "Although the boss never said it directly, there was an implicit understanding that everyone should work late to meet the deadline.",
     "status": "new"
   },
@@ -308,8 +356,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Stated clearly",
     "synonyms": "specific, express, definite",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The instructions were explicit, leaving no room for misunderstanding about how to assemble the furniture.",
     "status": "new"
   },
@@ -320,8 +368,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "In a weak or indistinct manner.",
     "synonyms": "softly, weakly, indistinctly",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "She could faintly hear the music playing from across the street.",
     "status": "new"
   },
@@ -332,9 +380,33 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Make full use of and derive benefit from a resource.",
     "synonyms": "used, abused, manipulated",
-    "uzbek": "",
     "russian": "",
-    "sentence": "The company successfully exploited the new solartechnologyto",
+    "uzbek": "",
+    "sentence": "The company successfully exploited the new solar technology to significantly reduce its operating costs.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 33,
+    "word": "Preliminary",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "Initial, early stage",
+    "synonyms": "introductory, initial, preceding",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The preliminary results of the experiment suggested a need for further investigation.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 34,
+    "word": "nefarious",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "evil",
+    "synonyms": "evil, unlawful, immoral",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The nefarious plot to steal the priceless diamond was uncovered by a vigilant security guard.",
     "status": "new"
   },
   {
@@ -344,20 +416,20 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Skill, artistry",
     "synonyms": "skill, trade, art",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The intricate wood carving showed the artisan’s exceptional craft and attention to detail.",
     "status": "new"
   },
   {
     "sourceNumber": 36,
-    "word": "idiosyncrasy, = idiosyncratic",
+    "word": "idiosyncrasy, idiosyncratic",
     "pronunciation": "",
     "partOfSpeech": "",
     "definition": "unique personal trait, quirky",
     "synonyms": "eccentricity, foible, peculiarity",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The author has a distinctive, idiosyncratic style that draws you in and keeps you reading.",
     "status": "new"
   },
@@ -368,8 +440,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Optimistic, hopeful",
     "synonyms": "optimistic, hopeful, cheerful",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "Despite the difficult circumstances, she remained sanguine about her future prospects.",
     "status": "new"
   },
@@ -380,8 +452,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "not loud, bright, noticeable, or obvious",
     "synonyms": "delicate, minute, refined",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The artist used a subtle blend of colors in the background, which made the main subject stand out.",
     "status": "new"
   },
@@ -392,8 +464,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Blame, guilt",
     "synonyms": "blame, guilt, fault",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The investigation determined the company’s culpability in the environmental disaster.",
     "status": "new"
   },
@@ -404,9 +476,9 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Failed to notice.",
     "synonyms": "missed, forgotten, ignored",
-    "uzbek": "",
     "russian": "",
-    "sentence": "The editor overlooked a critical typo on the cover page.",
+    "uzbek": "",
+    "sentence": "The editor overlooked a critical typo the cover page.",
     "status": "new"
   },
   {
@@ -416,8 +488,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "never done or known before",
     "synonyms": "unexampled, original, unmatched",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The level of complexity in the new software system was unprecedented, requiring all engineers to undergo specialized training.",
     "status": "new"
   },
@@ -426,23 +498,47 @@ window.VOCABULARY_SETS.pspart1=[
     "word": "Arbitrary",
     "pronunciation": "",
     "partOfSpeech": "",
-    "definition": "based on random choice or personal impulse, rather than any reason or system",
+    "definition": "based random choice or personal impulse, rather than any reason or system",
     "synonyms": "random, erratic, inconsistent",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The decision to close the park early felt arbitrary to the visitors who had planned to stay until sunset.",
     "status": "new"
   },
   {
     "sourceNumber": 43,
-    "word": "diminutive, = diminution",
+    "word": "diminutive, diminution",
     "pronunciation": "",
     "partOfSpeech": "",
     "definition": "extremely small",
     "synonyms": "small, little, tiny",
-    "uzbek": "",
     "russian": "",
-    "sentence": "The robin’s nest held a clutch of diminutiveblue",
+    "uzbek": "",
+    "sentence": "The robin’s nest held a clutch of diminutive blue eggs.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 44,
+    "word": "Enlist",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "Join, recruit",
+    "synonyms": "join, recruit, sign up",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "They tried to enlist new members into their club.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 45,
+    "word": "Succumb",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "To fail to resist pressure, temptation, or some other negative force.",
+    "synonyms": "yield, capitulate, submit",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "Despite his strict diet, he eventually succumbed to the temptation of the chocolate cake.",
     "status": "new"
   },
   {
@@ -452,8 +548,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Suffer patiently, last",
     "synonyms": "undergo, experience, suffer",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "She had to endure the constant noise from her neighbor’s construction project.",
     "status": "new"
   },
@@ -464,8 +560,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "to like or enjoy something",
     "synonyms": "enjoy, savor, appreciate",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "She seemed to truly relish the challenge of solving the complex puzzle.",
     "status": "new"
   },
@@ -476,8 +572,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "to follow a route that is not straight or direct",
     "synonyms": "wander, roam, stray",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The river began to meander lazily through the valley.",
     "status": "new"
   },
@@ -488,8 +584,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "powerful, persuasive, or effective",
     "synonyms": "powerful, strong, influential",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The candidate gave a potent speech that swayed many undecided voters.",
     "status": "new"
   },
@@ -500,8 +596,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "to make widely known, to publicize",
     "synonyms": "publish, announce, proclaim",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The government decided to promulgate the new health regulations immediately.",
     "status": "new"
   },
@@ -512,9 +608,9 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "End, finish",
     "synonyms": "cessation, demise, termination",
-    "uzbek": "",
     "russian": "",
-    "sentence": "The expiration date on the coupon meant that it was no longer valid after the end of the month.",
+    "uzbek": "",
+    "sentence": "The expiration date the coupon meant that it was no longer valid after the end of the month.",
     "status": "new"
   },
   {
@@ -524,8 +620,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "not logical or reasonable",
     "synonyms": "unreasonable, illogical, absurd",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "His fear of flying was completely irrational, as statistics showed it was one of the safest ways to travel.",
     "status": "new"
   },
@@ -536,8 +632,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "unrealistically aiming for perfection",
     "synonyms": "romantic, utopian, visionary",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The idealistic new employee thought they could overhaul the entire company’s workflow in a single week.",
     "status": "new"
   },
@@ -548,8 +644,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Scold, rebuke",
     "synonyms": "rebuke, scold, censure",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The manager had to publicly reprimand the employee for consistently showing up late to work.",
     "status": "new"
   },
@@ -560,9 +656,33 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "traditional, accepted, mainstream, standard",
     "synonyms": "traditional, customary, standard",
-    "uzbek": "",
     "russian": "",
-    "sentence": "The artist’s style was highly unconventional,",
+    "uzbek": "",
+    "sentence": "The artist’s style was highly unconventional, departing significantly from the conventional methods taught in art school.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 56,
+    "word": "intrepid",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "courageous",
+    "synonyms": "courageous, brave, fearless",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The intrepid explorer navigated the treacherous jungle, unafraid of the challenges ahead.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 57,
+    "word": "Collude",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "Secretly cooperate",
+    "synonyms": "plot, conspire, scheme",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The two companies decided to collude to keep prices high and restrict competition.",
     "status": "new"
   },
   {
@@ -572,9 +692,9 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "to judge the quality or importance of something",
     "synonyms": "estimate, evaluate, judge",
-    "uzbek": "",
     "russian": "",
-    "sentence": "The committee will assess the proposals based on their originality and feasibility.",
+    "uzbek": "",
+    "sentence": "The committee will assess the proposals based their originality and feasibility.",
     "status": "new"
   },
   {
@@ -584,8 +704,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "to restrict or restrain, to put in chains",
     "synonyms": "restriction, constraint, limitation",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The lack of funding continues to fetter the organization’s ability to expand its services.",
     "status": "new"
   },
@@ -596,8 +716,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "prove wrong",
     "synonyms": "refute, disprove, discredit",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The journalist set out to debunk the pervasive myth about the city’s founding.",
     "status": "new"
   },
@@ -608,8 +728,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "incongruity between expected and results",
     "synonyms": "sarcastic, cynical, wry",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "It was ironic that the firefighter’s house burned down while he was away fighting a fire.",
     "status": "new"
   },
@@ -620,8 +740,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "making fun of someone or something in a cruel way",
     "synonyms": "ridiculing, taunting, sneering",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The bully’s mocking laughter followed the nervous student down the hallway.",
     "status": "new"
   },
@@ -632,8 +752,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "related to or similar to an island",
     "synonyms": "parochial, narrow, provincial",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The nation’s small size and geographical isolation contributed to its cultural insularity, making it feel separate from the rest of the world.",
     "status": "new"
   },
@@ -644,8 +764,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Said briefly and clearly",
     "synonyms": "concisely, briefly, tersely",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The manager described the new policy succinctly, covering all the key points in less than five minutes.",
     "status": "new"
   },
@@ -656,9 +776,9 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "to continue to be heard; to echo repeatedly",
     "synonyms": "echo, resonate, resound",
-    "uzbek": "",
     "russian": "",
-    "sentence": "The sound of the final gunshot continued to reverberate through the canyon for several seconds.",
+    "uzbek": "",
+    "sentence": "The sound of the final gunshot to reverberate through the canyon for several seconds.",
     "status": "new"
   },
   {
@@ -668,8 +788,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Think deeply",
     "synonyms": "contemplate, consider, reflect",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "She paused to ponder the difficult question before giving her answer.",
     "status": "new"
   },
@@ -679,10 +799,22 @@ window.VOCABULARY_SETS.pspart1=[
     "pronunciation": "",
     "partOfSpeech": "",
     "definition": "Direction, position",
-    "synonyms": "aspect, alignment,",
-    "uzbek": "",
+    "synonyms": "aspect, alignment, exposure",
     "russian": "",
-    "sentence": "The building’s",
+    "uzbek": "",
+    "sentence": "The building’s orientation was chosen to maximize sunlight during the winter months.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 68,
+    "word": "Overlook",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "Miss, ignore",
+    "synonyms": "miss, disregard, ignore",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "It’s easy to overlook small details when rushing through a project.",
     "status": "new"
   },
   {
@@ -692,8 +824,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "foolish, reckless",
     "synonyms": "unwise, careless, injudicious",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "It was imprudent of them to invest all their savings in such a volatile stock.",
     "status": "new"
   },
@@ -704,8 +836,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "causing a feeling of sadness",
     "synonyms": "moving, affecting, touching",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The poignant melody brought tears to her eyes.",
     "status": "new"
   },
@@ -716,8 +848,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "impossible to express in words",
     "synonyms": "indescribable, inexpressible, heavenly",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The beauty of the sunset over the ocean was ineffable.",
     "status": "new"
   },
@@ -728,8 +860,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "suggesting something unpleasant will happen",
     "synonyms": "threatening, menacing, foreboding",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The dark, ominous clouds suggested a severe storm was approaching.",
     "status": "new"
   },
@@ -740,9 +872,9 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "to announce officially or publicly",
     "synonyms": "announce, declare, publish",
-    "uzbek": "",
     "russian": "",
-    "sentence": "The queen will proclaim her successor at the ceremony next month.",
+    "uzbek": "",
+    "sentence": "The queen will proclaim her successor at the ceremony month.",
     "status": "new"
   },
   {
@@ -752,8 +884,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "1) origin or beginning 2) an idea or concept",
     "synonyms": "notion, concept, idea",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The architect’s initial conception for the building was far more elaborate than the final design.",
     "status": "new"
   },
@@ -764,8 +896,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "irritating, annoying",
     "synonyms": "annoying, irritating, vexatious",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The buzzing of the mosquito was an irksome distraction during the quiet study session.",
     "status": "new"
   },
@@ -776,8 +908,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "to make someone more powerful or important",
     "synonyms": "elevate, promote, magnify",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The politician sought to aggrandize his position by appointing loyal supporters to key roles.",
     "status": "new"
   },
@@ -788,9 +920,9 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Challenges traditions or norms",
     "synonyms": "dissident, unconventional, nonconformist",
-    "uzbek": "",
     "russian": "",
-    "sentence": "Her iconoclastic approach to corporate leadership challenged the entrenched, old- school practices of the company.",
+    "uzbek": "",
+    "sentence": "Her iconoclastic approach to corporate leadership challenged the entrenched, old-school practices of the company.",
     "status": "new"
   },
   {
@@ -800,9 +932,33 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "grow, flourish",
     "synonyms": "increase, rise, swell",
-    "uzbek": "",
     "russian": "",
-    "sentence": "The city’s downtown revitalization efforts",
+    "uzbek": "",
+    "sentence": "The city’s downtown revitalization efforts are expected to cause businesses to burgeon in the coming years.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 79,
+    "word": "cajole",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "coax",
+    "synonyms": "coax, wheedle, seduce",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "He tried to cajole her into accepting the promotion by listing all the benefits.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 80,
+    "word": "Relegate",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "to downgrade, to lower in rank or status",
+    "synonyms": "banish, exile, deport",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "After failing to meet sales targets for the third quarter, the manager decided to relegate the employee to a non-supervisory role.",
     "status": "new"
   },
   {
@@ -812,8 +968,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "surplus",
     "synonyms": "plenty, abundance, wealth",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The garden produced a plethora of tomatoes this summer, far more than we could eat.",
     "status": "new"
   },
@@ -824,8 +980,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Very productive",
     "synonyms": "fertile, rich, productive",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The prolific writer published three novels last year alone.",
     "status": "new"
   },
@@ -836,8 +992,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Speed up",
     "synonyms": "accelerate, facilitate, hasten",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The company decided to hire more staff to expedite the processing of new applications.",
     "status": "new"
   },
@@ -848,9 +1004,9 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "someone who has a great desire to possess money and hates to spend it",
     "synonyms": "cheapskate, scrooge, skinflint",
-    "uzbek": "",
     "russian": "",
-    "sentence": "The old man was such a miser that he refused to turn on the heat, even in the dead of winter.",
+    "uzbek": "",
+    "sentence": "The old man was such a miser that he refused to turn the heat, even in the dead of winter.",
     "status": "new"
   },
   {
@@ -860,8 +1016,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Applying to the past",
     "synonyms": "backdated, retrospective, ex post facto",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The company decided to implement the pay raise retroactively to the start of the fiscal year.",
     "status": "new"
   },
@@ -872,8 +1028,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Replace",
     "synonyms": "replace, reserve, surrogate",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "Please substitute the old battery with a new one.",
     "status": "new"
   },
@@ -884,8 +1040,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Imitate, match",
     "synonyms": "imitate, mirror, copy",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "She tried to emulate her older sister by achieving high grades in all her subjects.",
     "status": "new"
   },
@@ -896,8 +1052,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Clear from blame",
     "synonyms": "acquit, clear, exonerate",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The DNA evidence finally served to vindicate the wrongly accused man.",
     "status": "new"
   },
@@ -908,21 +1064,57 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "contempt, the feeling that someone or something is worthless",
     "synonyms": "contempt, disdain, hatred",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "She felt nothing but scorn for his unethical business practices.",
     "status": "new"
   },
   {
     "sourceNumber": 90,
-    "word": "diffident, − diffidence",
+    "word": "diffident, diffidence",
     "pronunciation": "",
     "partOfSpeech": "",
     "definition": "shy",
     "synonyms": "shy, withdrawn, bashful",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The diffident student hesitated before raising her hand, afraid to speak in front of the class.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 91,
+    "word": "prevaricator",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "liar",
+    "synonyms": "liar, storyteller, fabulist",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The journalist exposed the politician as a prevaricator who consistently misled the public.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 92,
+    "word": "Sentiment",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "a view of or attitude towards a situation or event; a general feeling or opinion",
+    "synonyms": "feeling, opinion, attitude",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "Public sentiment shifted dramatically after the announcement of the new policy.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 93,
+    "word": "Reluctant",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "Unwilling",
+    "synonyms": "hesitant, unwilling, loath",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "She was reluctant to admit she was wrong.",
     "status": "new"
   },
   {
@@ -932,8 +1124,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Very detailed, complex",
     "synonyms": "complicated, complex, elaborate",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The watchmaker showed them the intricate clockwork mechanism that required months of detailed assembly.",
     "status": "new"
   },
@@ -944,9 +1136,9 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "unfriendly, threatening",
     "synonyms": "aggressive, unfriendly, antagonistic",
-    "uzbek": "",
     "russian": "",
-    "sentence": "The crowd turned hostile as the speaker continued his controversial remarks.",
+    "uzbek": "",
+    "sentence": "The crowd turned hostile as the speaker his controversial remarks.",
     "status": "new"
   },
   {
@@ -956,8 +1148,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Calm, satisfy",
     "synonyms": "pacify, conciliate, mollify",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "She tried to appease the crying baby with a lullaby.",
     "status": "new"
   },
@@ -968,8 +1160,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "emotionally reserved",
     "synonyms": "silent, reserved, quiet",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "His natural reticence made it difficult for him to express his feelings openly.",
     "status": "new"
   },
@@ -980,8 +1172,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "hopeless",
     "synonyms": "unsuccessful, useless, unavailing",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "Their efforts to save the sinking ship were ultimately futile.",
     "status": "new"
   },
@@ -992,8 +1184,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "support",
     "synonyms": "support, strengthen, sustain",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The community fundraiser helped to bolster the local library’s resources.",
     "status": "new"
   },
@@ -1004,8 +1196,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "doubtful",
     "synonyms": "doubtful, questionable, suspect",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "She had a dubious expression when he told her he had won the lottery.",
     "status": "new"
   },
@@ -1016,9 +1208,9 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "to advertise or praise something (often to sell it)",
     "synonyms": "advertise, announce, promote",
-    "uzbek": "",
     "russian": "",
-    "sentence": "The company spent millions to tout its new smartphone as the best on the market.",
+    "uzbek": "",
+    "sentence": "The company spent millions to tout its new smartphone as the best the market.",
     "status": "new"
   },
   {
@@ -1028,20 +1220,20 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "an excess supply of something",
     "synonyms": "surplus, excess, overabundance",
-    "uzbek": "",
     "russian": "",
-    "sentence": "A glut of oil on the market caused prices to drop significantly.",
+    "uzbek": "",
+    "sentence": "A glut of oil the market caused prices to drop significantly.",
     "status": "new"
   },
   {
     "sourceNumber": 103,
-    "word": "estrange, − estrangement",
+    "word": "estrange, estrangement",
     "pronunciation": "",
     "partOfSpeech": "",
     "definition": "alienate, alienation",
     "synonyms": "alienate, anger, sever",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "His refusal to communicate began to estrange him from his family.",
     "status": "new"
   },
@@ -1052,9 +1244,33 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "able to judge something fairly",
     "synonyms": "unbiased, neutral, objective",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The judge promised to remain impartial throughout the trial, considering all evidence fairly.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 105,
+    "word": "Coarse",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "1) rough, not smooth 2) rude or offensive in manner or speech",
+    "synonyms": "rough, harsh, crude",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The sandpaper had a coarse texture, and his coarse remarks offended the audience.",
+    "status": "new"
+  },
+  {
+    "sourceNumber": 106,
+    "word": "perquisite",
+    "pronunciation": "",
+    "partOfSpeech": "",
+    "definition": "additional payment, bonus",
+    "synonyms": "bonus, perk, privilege",
+    "russian": "",
+    "uzbek": "",
+    "sentence": "The executive team was granted stock options as a perquisite, allowing them to share in the company’s success and potential profits.",
     "status": "new"
   },
   {
@@ -1064,8 +1280,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Responds more emotionally or forcibly than is justified.",
     "synonyms": "panics, loses it, alarms",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "He overreacts to even minor criticism by getting visibly angry and defensive.",
     "status": "new"
   },
@@ -1076,8 +1292,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "obsessed with something",
     "synonyms": "absorbed, engrossed, obsessed",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "She was so preoccupied with her new business idea that she barely noticed the conversation around her.",
     "status": "new"
   },
@@ -1088,8 +1304,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "clarify",
     "synonyms": "explain, clarify, illustrate",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The professor’s detailed explanation helped to elucidate the complex theory for the students.",
     "status": "new"
   },
@@ -1100,8 +1316,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "to make law, to put into practice (a belief, idea, or suggestion)",
     "synonyms": "pass, ordain, authorize",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The government will soon enact new legislation to reduce carbon emissions.",
     "status": "new"
   },
@@ -1112,8 +1328,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "suck up, flatterer",
     "synonyms": "bootlicker, toady, flatterer",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The manager’s sycophant agreed with every decision, hoping for a promotion.",
     "status": "new"
   },
@@ -1124,9 +1340,9 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "different, conflicting",
     "synonyms": "different, distinct, diverse",
-    "uzbek": "",
     "russian": "",
-    "sentence": "The two sisters had such divergent opinions on politics that they avoided discussing the subject entirely.",
+    "uzbek": "",
+    "sentence": "The two sisters had such divergent opinions politics that they avoided discussing the subject entirely.",
     "status": "new"
   },
   {
@@ -1136,8 +1352,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Merging, joining together",
     "synonyms": "mixture, amalgamation, blend",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The culinary fusion of French and Japanese techniques created a truly unique dining experience.",
     "status": "new"
   },
@@ -1148,8 +1364,8 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Replace",
     "synonyms": "replace, supersede, displace",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The younger employee hoped to supplant the current manager when he retired.",
     "status": "new"
   },
@@ -1160,9 +1376,9 @@ window.VOCABULARY_SETS.pspart1=[
     "partOfSpeech": "",
     "definition": "Not affected or influenced by something.",
     "synonyms": "resistant, protected, exempt",
-    "uzbek": "",
     "russian": "",
+    "uzbek": "",
     "sentence": "The CEO considered himself immune to criticism after years of successful business deals.",
     "status": "new"
   }
-];\n
+];
